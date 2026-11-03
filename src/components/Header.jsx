@@ -1,11 +1,13 @@
-const Header = () => {
-  const NAV_LINKS = [
-    { name: "Home", href: "#" },
-    { name: "Browse", href: "#" },
-    { name: "About", href: "#" },
-  ]
+const NAV_LINKS = [
+  { name: "Home", href: "#" },
+  { name: "Browse", href: "#" },
+  { name: "About", href: "#" },
+]
 
-  const LINK_CLASSES = "rounded hover:text-glow transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+const LINK_CLASSES = "rounded hover:text-glow transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+
+const Header = () => {
+
   
   return (
     <header className="py-4 w-full border-b border-border">
