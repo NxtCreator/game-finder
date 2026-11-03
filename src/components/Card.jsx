@@ -1,6 +1,6 @@
 import { Star } from "lucide-react"
 
-const Card = () => {
+const Card = ({ title }) => {
   return (
     <div className="bg-card text-foreground rounded-lg w-64 p-4 flex flex-col">
         <img 
@@ -8,7 +8,7 @@ const Card = () => {
             alt="Game Cover" 
             className="w-full object-cover rounded-lg"
         />
-        <h2 className="text-md font-semibold mt-4 truncate">The Haunted Manor of Forgotten Souls</h2>
+        <h2 className="text-md font-semibold mt-4 truncate">{title}</h2>
 
         <div className="flex items-center mt-2">
             <Star
