@@ -1,6 +1,6 @@
 import { Star } from "lucide-react"
 
-const Card = ({ title }) => {
+const Card = ({ title, rating, year }) => {
   return (
     <div className="bg-card text-foreground rounded-lg w-64 p-4 flex flex-col">
         <img 
@@ -17,12 +17,12 @@ const Card = ({ title }) => {
             />
           <p className="text-muted-foreground flex items-center gap-1.5">
               <span className="font-semibold text-foreground">
-                  4.5
+                  {rating}
               </span> 
 
             <span>•</span>
 
-              2008
+              {year}
           </p>
         </div>
     </div>
