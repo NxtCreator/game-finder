@@ -9,9 +9,22 @@ const Card = () => {
             className="w-full object-cover rounded-lg"
         />
         <h2 className="text-md font-semibold mt-4 truncate">The Haunted Manor of Forgotten Souls</h2>
-        <p>
-            <Star className="inline-block w-4 h-4 text-gold mr-1" />
-        </p>
+
+        <div className="flex items-center mt-2">
+            <Star
+              fill="#FACC15" 
+              className="inline-block w-5 h-5 mr-1 text-gold" 
+            />
+          <p className="text-muted-foreground flex items-center gap-1.5">
+              <span className="font-semibold text-foreground">
+                  4.5
+              </span> 
+
+            <span>•</span>
+
+              2008
+          </p>
+        </div>
     </div>
   )
 }
