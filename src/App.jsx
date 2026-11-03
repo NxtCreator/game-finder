@@ -2,6 +2,8 @@ import { useState } from "react"
 import GameSection from "./components/GameSection.jsx"
 import Header from "./components/Header.jsx"
 import GAMES from "./data/data.js"
+import { Search } from "lucide-react"
+import SearchBar from "./components/SearchBar.jsx"
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -13,14 +15,8 @@ const App = () => {
   return (
     <div className="bg-background min-h-dvh">
       <Header />
-      <div className="px-4 py-8">
-        <input
-          type="text"
-          placeholder="Search games..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="bg-input text-foreground border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-glow focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-        />
+      <div className="mx-auto w-full max-w-xl px-4 py-8">
+        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       </div>
       <p className="text-center text-muted-foreground">
         {searchTerm ? `Searching for "${searchTerm}"...` : "Browse our collection of popular games!"}
