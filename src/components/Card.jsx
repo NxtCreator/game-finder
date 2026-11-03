@@ -2,7 +2,7 @@ import { Star } from "lucide-react"
 
 const Card = ({ title, rating, year }) => {
   return (
-    <div className="bg-card text-foreground rounded-lg w-64 p-4 flex flex-col">
+    <div className="bg-card text-foreground rounded-lg p-4 flex flex-col">
         <img 
             src="https://placehold.co/300x400/171325/A855F7?text=Game+Cover" 
             alt="Game Cover" 

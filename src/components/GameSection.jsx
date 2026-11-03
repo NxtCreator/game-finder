@@ -1,10 +1,11 @@
-import GAMES from "../data/data.js"
 import Card from "./Card.jsx"
 
-const GameSection = () => {
+const GameSection = ({ title, games }) => {
   return (
-    <div className="grid-cols-4 gap-4 grid">
-        {GAMES.map(game => (
+    <div className="">
+      <h1 className="text-foreground text-2xl font-body font-bold mb-4">{title}</h1>
+      <div className="grid-cols-4 gap-4 grid">
+        {games.map(game => (
           <Card 
             key={game.id} 
             title={game.title} 
@@ -12,6 +13,7 @@ const GameSection = () => {
             year={game.year} 
           />
         ))}
+    </div>
     </div>
   )
 }

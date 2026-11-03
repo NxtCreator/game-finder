@@ -6,4 +6,13 @@
     --color-foreground: #EDE9FE;
     --color-gold: #FACC15;
     --color-muted-foreground: #A79BC4;
-} 
+    --color-accent: #A855F7;
+    --color-glow: #22D3EE;
+    --color-border: #2A2340;
+    --font-display: 'Griffy', cursive;
+    --font-body:  'Nunito', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+}
