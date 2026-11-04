@@ -1,13 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import GameSection from "./components/GameSection.jsx";
 import Header from "./components/Header.jsx";
 import GAMES from "./data/data.js";
 import Hero from "./components/Hero.jsx";
+import { fetchData } from "./data/fetchData.js";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [data, setData] = useState([]);
 
-  const filteredGames = GAMES.filter((game) =>
+  useEffect(() => {
+    fetchData()
+      .then((fetchedData) => {
+        setData(fetchedData);
+        console.log("Fetched data:", fetchedData);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
+  const filteredGames = data.filter((game) =>
     game.title.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()),
   );
 

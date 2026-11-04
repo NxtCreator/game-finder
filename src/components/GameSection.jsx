@@ -21,8 +21,11 @@ const GameSection = ({ title, games }) => {
             <Card
               key={game.id}
               title={game.title}
-              rating={game.rating}
-              year={game.year}
+              thumbnail={game.thumbnail}
+              short_description={game.short_description}
+              genre={game.genre}
+              // platform={game.platform}
+              year={game.release_date}
             />
           ))}
         </div>
