@@ -1,4 +1,4 @@
-const Card = ({ title, thumbnail, genre, year }) => {
+const Card = ({ title, thumbnail }) => {
   return (
     <a
       href="#"
