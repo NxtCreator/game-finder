@@ -1,5 +1,6 @@
 const API_URL = "https://www.freetogame.com/api/games?platform=pc";
 
+
 export const fetchData = async () => {
     try {
         const response = await fetch(API_URL);
