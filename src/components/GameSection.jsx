@@ -1,5 +1,6 @@
 import { Ghost } from "lucide-react";
 import Card from "./Card.jsx";
+import Card2 from "./Card2.jsx";
 
 const GameSection = ({ title, games }) => {
   return (
@@ -22,9 +23,8 @@ const GameSection = ({ title, games }) => {
               key={game.id}
               title={game.title}
               thumbnail={game.thumbnail}
-              short_description={game.short_description}
+              description={game.short_description}
               genre={game.genre}
-              // platform={game.platform}
               year={game.release_date}
             />
           ))}

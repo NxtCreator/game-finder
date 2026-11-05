@@ -1,25 +1,20 @@
-import { Star } from "lucide-react";
-
 const Card = ({ title, thumbnail, genre, year }) => {
   return (
-    <div className="bg-card text-foreground rounded-lg p-4 flex flex-col">
+    <a
+      href="#"
+      className="bg-card text-foreground rounded-lg overflow-hidden relative group aspect-video outline-none focus-visible:ring-2 focus-visible:ring-glow transition-colors"
+    >
       <img
         src={thumbnail}
-        alt="Game Cover"
-        className="w-full object-cover rounded-lg"
+        alt={title}
+        className="w-full h-full object-cover group-hover:blur-sm group-focus-within:blur-sm transition-all duration-300"
       />
-      <h2 className="text-md font-semibold mt-4 truncate">{title}</h2>
-
-      <div className="flex items-center mt-2">
-        <p className="text-muted-foreground flex items-center gap-1.5">
-          <span className="font-semibold text-foreground">{genre}</span>
-
-          <span>•</span>
-
-          {year}
-        </p>
+      <div className="flex items-center justify-center absolute inset-0 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 bg-background/50 flex-col p-4">
+        <h2 className="text-foreground text-lg font-body font-bold mb-1">
+          {title}
+        </h2>
       </div>
-    </div>
+    </a>
   );
 };
 export default Card;
