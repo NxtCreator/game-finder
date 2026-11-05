@@ -3,6 +3,7 @@ import GameSection from "./components/GameSection.jsx";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import { fetchData } from "./data/fetchData.js";
+import Footer from "./components/Footer.jsx";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -53,6 +54,7 @@ const App = () => {
           <GameSection title="All Games" games={filteredGames} />
         )}
       </main>
+      <Footer />
     </div>
   );
 };
