@@ -1,7 +1,9 @@
-const Card = ({ title, thumbnail }) => {
+import { Link } from "react-router";
+
+const Card = ({ title, thumbnail, id }) => {
   return (
-    <a
-      href="#"
+    <Link
+      to={`/game/${id}`}
       className="bg-card text-foreground rounded-lg overflow-hidden relative group aspect-video outline-none focus-visible:ring-2 focus-visible:ring-glow transition-colors"
     >
       <img
@@ -14,7 +16,7 @@ const Card = ({ title, thumbnail }) => {
           {title}
         </h2>
       </div>
-    </a>
+    </Link>
   );
 };
 export default Card;

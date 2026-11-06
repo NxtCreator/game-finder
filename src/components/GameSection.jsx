@@ -19,7 +19,12 @@ const GameSection = ({ title, games }) => {
       ) : (
         <div className="grid-cols-4 gap-4 grid">
           {games.map((game) => (
-            <Card key={game.id} title={game.title} thumbnail={game.thumbnail} />
+            <Card
+              key={game.id}
+              title={game.title}
+              thumbnail={game.thumbnail}
+              id={game.id}
+            />
           ))}
         </div>
       )}
