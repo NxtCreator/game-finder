@@ -4,7 +4,7 @@ const Card = ({ title, thumbnail, id }) => {
   return (
     <Link
       to={`/game/${id}`}
-      className="bg-card text-foreground rounded-lg overflow-hidden relative group aspect-video outline-none focus-visible:ring-2 focus-visible:ring-glow transition-colors"
+      className="bg-card text-foreground rounded-lg overflow-hidden relative group aspect-video outline-none focus-visible:ring-2 focus-visible:ring-glow"
     >
       <img
         src={thumbnail}

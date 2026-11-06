@@ -6,7 +6,7 @@ import GameSection from "./GameSection.jsx";
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const Home = () => {
         setError(error);
       })
       .finally(() => {
-        setLoading(false);
+        setIsLoading(false);
       });
   }, []);
 
@@ -40,7 +40,7 @@ const Home = () => {
               Please try again later.
             </p>
           </div>
-        ) : loading ? (
+        ) : isLoading ? (
           <div className="flex flex-col items-center justify-center gap-2 py-8">
             <p className="text-foreground text-lg font-display">Loading...</p>
           </div>
