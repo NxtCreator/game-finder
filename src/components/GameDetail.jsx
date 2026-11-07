@@ -2,6 +2,7 @@ import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { fetchGameById } from "../data/fetchData";
 import { ExternalLink } from "lucide-react";
+import GameDetailSkeleton from "./GameDetailSkeleton";
 
 const GameDetail = () => {
   const [game, setGame] = useState(null);
@@ -9,6 +10,14 @@ const GameDetail = () => {
   const [error, setError] = useState(null);
 
   const { id } = useParams();
+
+  const requirementLabels = {
+    graphics: "Graphics",
+    memory: "Memory",
+    os: "Operating System",
+    processor: "Processor",
+    storage: "Storage",
+  };
 
   useEffect(() => {
     setIsLoading(true);
@@ -29,7 +38,7 @@ const GameDetail = () => {
   }, [id]);
 
   if (isLoading) {
-    return <p>loading...</p>;
+    return <GameDetailSkeleton />;
   }
 
   if (error) {
@@ -39,6 +48,10 @@ const GameDetail = () => {
   if (!game) {
     return <p>Game not found.</p>;
   }
+
+  const requirements = game.minimum_system_requirements;
+  const hasRequirements =
+    requirements && Object.values(requirements).some(Boolean);
 
   return (
     <main className="mx-auto w-full max-w-7xl px-4 py-8">
@@ -84,6 +97,43 @@ const GameDetail = () => {
           </a>
         </div>
       </div>
+
+      <section className="flex flex-col gap-3 mt-6">
+        <h2 className="font-body text-2xl text-foreground">About This Game</h2>
+        <p className="text-sm font-body text-muted-foreground leading-relaxed">
+          {game.description}
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-body text-foreground mb-4 mt-6">
+          System Requirements
+        </h2>
+
+        {hasRequirements ? (
+          <div className="flex flex-col gap-3 border-t border-border pt-4">
+            <h3 className="font-semibold text-foreground">Minimum Specs</h3>
+
+            {Object.entries(requirements)
+              .filter(([, value]) => Boolean(value))
+              .map(([key, value]) => (
+                <p
+                  key={key}
+                  className="text-sm text-muted-foreground leading-relaxed"
+                >
+                  <span className="font-semibold text-foreground">
+                    {requirementLabels[key]}:
+                  </span>{" "}
+                  {value}
+                </p>
+              ))}
+          </div>
+        ) : (
+          <p className="text-sm text-muted-foreground">
+            System requirements are not available for this game
+          </p>
+        )}
+      </section>
     </main>
   );
 };

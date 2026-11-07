@@ -6,12 +6,15 @@ import GameDetail from "./components/GameDetail.jsx";
 
 const App = () => {
   return (
-    <div className="bg-background min-h-dvh">
+    <div className="bg-background min-h-dvh flex flex-col">
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/game/:id" element={<GameDetail />} />
-      </Routes>
+
+      <div className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/game/:id" element={<GameDetail />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   );

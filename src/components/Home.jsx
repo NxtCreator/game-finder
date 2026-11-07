@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchData } from "../data/fetchData.js";
 import Hero from "./Hero.jsx";
 import GameSection from "./GameSection.jsx";
+import GameGridSkeleton from "./GameGridSkeleton.jsx";
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -41,9 +42,7 @@ const Home = () => {
             </p>
           </div>
         ) : isLoading ? (
-          <div className="flex flex-col items-center justify-center gap-2 py-8">
-            <p className="text-foreground text-lg font-display">Loading...</p>
-          </div>
+          <GameGridSkeleton />
         ) : (
           <GameSection title="All Games" games={filteredGames} />
         )}

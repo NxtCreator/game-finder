@@ -17,7 +17,7 @@ const GameSection = ({ title, games }) => {
           </p>
         </div>
       ) : (
-        <div className="grid-cols-4 gap-4 grid">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
           {games.map((game) => (
             <Card
               key={game.id}
