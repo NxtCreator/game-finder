@@ -1,10 +1,12 @@
-HollowDex 👻
+# HollowDex 👻
 
 A game discovery app for finding your next favorite game.
 
 HollowDex lets you browse free-to-play games, search for titles, and explore individual game pages with descriptions and system requirements.
 
-About the Project
+**[Live Demo →](https://game-finder-phi-nine.vercel.app/)**
+
+## About the Project
 
 HollowDex was a project I genuinely enjoyed building. It gave me an opportunity to practise React, work with APIs, and get more comfortable building a complete application.
 
@@ -14,87 +16,89 @@ I'm happy with how HollowDex has turned out so far, and I hope to keep improving
 
 This is still a work in progress, and I'm looking forward to seeing where I can take it next.
 
-Features
+## Features
 
-Browse Games — Explore a collection of free-to-play games.
+- **Browse Games** — Explore a collection of free-to-play games.
+- **Search** — Find games by title.
+- **Game Details** — View individual game pages with descriptions and other information.
+- **System Requirements** — Check minimum system requirements when available.
+- **Loading States** — Skeleton placeholders while game data is being fetched.
+- **Responsive Design** — A layout that adapts to different screen sizes.
 
-Search — Find games by title.
+## Preview
 
-Game Details — View individual game pages with descriptions and other information.
+Live Demo: [HollowDex](https://game-finder-phi-nine.vercel.app/)
 
-System Requirements — Check minimum system requirements when available.
+<img width="1366" height="768" alt="HollowDex home page with the hero section, search bar and game grid" src="https://github.com/user-attachments/assets/9c43d7a4-fd91-429b-88fc-56b9af3b00cd" />
 
-Loading States — Skeleton placeholders while game data is being fetched.
+<img width="1366" height="768" alt="HollowDex game detail page" src="https://github.com/user-attachments/assets/c8f59a11-7ed4-41d8-b94b-4f58bd4df69b" />
 
-Responsive Design — A layout that adapts to different screen sizes.
+## Built With
 
-Preview
+- React
+- Vite
+- Tailwind CSS
+- React Router
+- Lucide React
+- [FreeToGame API](https://www.freetogame.com/)
 
-Live Demo: HollowDex
-<img width="1366" height="768" alt="Screenshot from 2026-11-07 21-37-26" src="https://github.com/user-attachments/assets/9c43d7a4-fd91-429b-88fc-56b9af3b00cd" />
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c8f59a11-7ed4-41d8-b94b-4f58bd4df69b" />
+## Getting Started
 
-
-Built With
-
-React
-
-Vite
-
-Tailwind CSS
-
-React Router
-
-Lucide React
-
-FreeToGame API
-
-Getting Started
-
-Prerequisites
+### Prerequisites
 
 Make sure you have the following installed:
 
-Node.js
+- Node.js
+- pnpm
 
-pnpm
+### Installation
 
-Installation
+1. Clone the repository:
 
-Clone the repository:
+   ```bash
+   git clone https://github.com/NxtCreator/game-finder.git
+   ```
 
-git clone https://github.com/NxtCreator/game-finder.git
+2. Navigate into the project directory:
 
-Navigate into the project directory:
+   ```bash
+   cd game-finder
+   ```
 
-cd game-finder
+3. Install dependencies:
 
-Install dependencies:
+   ```bash
+   pnpm install
+   ```
 
-pnpm install
+4. Start the development server:
 
-Start the development server:
+   ```bash
+   pnpm dev
+   ```
 
-pnpm dev
+5. Open the local URL provided in your terminal.
 
-Open the local URL provided in your terminal.
-
-Production Build
+### Production Build
 
 To create a production build:
 
+```bash
 pnpm build
+```
 
 To preview the production build locally:
 
+```bash
 pnpm preview
+```
 
-Data Source
+## Data Source
 
-HollowDex uses the FreeToGame API to retrieve game information.
+HollowDex uses the [FreeToGame API](https://www.freetogame.com/) to retrieve game information.
 
 The availability of descriptions, images, and system requirements depends on the data provided by the API.
 
-Project Status
+## Project Status
 
 The initial version of HollowDex is complete and deployed. I'm hoping to revisit the project, improve existing features, and add more functionality over time.
