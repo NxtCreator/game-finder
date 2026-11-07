@@ -1,6 +1,5 @@
 import { Ghost } from "lucide-react";
 import Card from "./Card.jsx";
-import Card2 from "./Card2.jsx";
 
 const GameSection = ({ title, games }) => {
   return (
